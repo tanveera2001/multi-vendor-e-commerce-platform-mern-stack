@@ -1,5 +1,10 @@
+import { useState } from "react";
+import Router from "./router/Router";
+import publicRoutes from "./router/routes/publicRoutes";
+
 function App() {
-  return <div className="bg-blue-500 text-white p-4">Hello, World!</div>;
+  const [allRoutes] = useState([...publicRoutes]);
+  return <Router allRoutes={allRoutes} />;
 }
 
 export default App;
