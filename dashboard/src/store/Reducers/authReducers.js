@@ -11,7 +11,7 @@ export const admin_login = createAsyncThunk(
       });
       console.log(data);
     } catch (error) {
-      throw error.response.data.message;
+      console.log(error.response.data);
     }
   },
 );
